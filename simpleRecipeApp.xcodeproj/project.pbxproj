@@ -11,6 +11,7 @@
 		8C1E6FA928BD84A00062CAB8 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1E6FA828BD84A00062CAB8 /* RecipeDetailView.swift */; };
 		8C1E6FAB28BD89670062CAB8 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1E6FAA28BD89670062CAB8 /* AppColor.swift */; };
 		8C1E6FAD28BDAB300062CAB8 /* RecipeCategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1E6FAC28BDAB300062CAB8 /* RecipeCategoryGridView.swift */; };
+		8C31337128BED3A000DCA510 /* ModifyRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C31337028BED3A000DCA510 /* ModifyRecipeView.swift */; };
 		8C344FD728BDBF7600503F5C /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C344FD628BDBF7600503F5C /* RecipesListView.swift */; };
 		8CB5AC1828BC4B7500B4034A /* simpleRecipeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5AC1728BC4B7500B4034A /* simpleRecipeAppApp.swift */; };
 		8CB5AC1C28BC4B7800B4034A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5AC1B28BC4B7800B4034A /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		8C1E6FA828BD84A00062CAB8 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		8C1E6FAA28BD89670062CAB8 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		8C1E6FAC28BDAB300062CAB8 /* RecipeCategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryGridView.swift; sourceTree = "<group>"; };
+		8C31337028BED3A000DCA510 /* ModifyRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRecipeView.swift; sourceTree = "<group>"; };
 		8C344FD628BDBF7600503F5C /* RecipesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
 		8CB5AC1428BC4B7500B4034A /* simpleRecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleRecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB5AC1728BC4B7500B4034A /* simpleRecipeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleRecipeAppApp.swift; sourceTree = "<group>"; };
@@ -45,9 +47,8 @@
 		8C1E6FA428BD74A40062CAB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8C344FD628BDBF7600503F5C /* RecipesListView.swift */,
-				8C1E6FA828BD84A00062CAB8 /* RecipeDetailView.swift */,
-				8C1E6FAC28BDAB300062CAB8 /* RecipeCategoryGridView.swift */,
+				8C31336F28BED2C300DCA510 /* ModifyRecipes */,
+				8C31336E28BED2B400DCA510 /* ExploreRecipes */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -59,6 +60,24 @@
 				8C1E6FAA28BD89670062CAB8 /* AppColor.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8C31336E28BED2B400DCA510 /* ExploreRecipes */ = {
+			isa = PBXGroup;
+			children = (
+				8C344FD628BDBF7600503F5C /* RecipesListView.swift */,
+				8C1E6FA828BD84A00062CAB8 /* RecipeDetailView.swift */,
+				8C1E6FAC28BDAB300062CAB8 /* RecipeCategoryGridView.swift */,
+			);
+			path = ExploreRecipes;
+			sourceTree = "<group>";
+		};
+		8C31336F28BED2C300DCA510 /* ModifyRecipes */ = {
+			isa = PBXGroup;
+			children = (
+				8C31337028BED3A000DCA510 /* ModifyRecipeView.swift */,
+			);
+			path = ModifyRecipes;
 			sourceTree = "<group>";
 		};
 		8CB5AC0B28BC4B7500B4034A = {
@@ -180,6 +199,7 @@
 				8C1E6FA928BD84A00062CAB8 /* RecipeDetailView.swift in Sources */,
 				8C1E6FAD28BDAB300062CAB8 /* RecipeCategoryGridView.swift in Sources */,
 				8C1E6FA728BD7F090062CAB8 /* RecipeData.swift in Sources */,
+				8C31337128BED3A000DCA510 /* ModifyRecipeView.swift in Sources */,
 				8C344FD728BDBF7600503F5C /* RecipesListView.swift in Sources */,
 				8CB5AC1828BC4B7500B4034A /* simpleRecipeAppApp.swift in Sources */,
 				8C1E6FAB28BD89670062CAB8 /* AppColor.swift in Sources */,
