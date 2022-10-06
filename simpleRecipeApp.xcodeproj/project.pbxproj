@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C063A4128EE88EF00254DC2 /* ModifyMainInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C063A4028EE88EF00254DC2 /* ModifyMainInformationView.swift */; };
 		8C1E6FA728BD7F090062CAB8 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1E6FA628BD7F090062CAB8 /* RecipeData.swift */; };
 		8C1E6FA928BD84A00062CAB8 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1E6FA828BD84A00062CAB8 /* RecipeDetailView.swift */; };
 		8C1E6FAB28BD89670062CAB8 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1E6FAA28BD89670062CAB8 /* AppColor.swift */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C063A4028EE88EF00254DC2 /* ModifyMainInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyMainInformationView.swift; sourceTree = "<group>"; };
 		8C1E6FA628BD7F090062CAB8 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 		8C1E6FA828BD84A00062CAB8 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		8C1E6FAA28BD89670062CAB8 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				8C31337028BED3A000DCA510 /* ModifyRecipeView.swift */,
-				8C063A4028EE88EF00254DC2 /* ModifyMainInformationView.swift */,
 			);
 			path = ModifyRecipes;
 			sourceTree = "<group>";
@@ -205,7 +202,6 @@
 				8C31337128BED3A000DCA510 /* ModifyRecipeView.swift in Sources */,
 				8C344FD728BDBF7600503F5C /* RecipesListView.swift in Sources */,
 				8CB5AC1828BC4B7500B4034A /* simpleRecipeAppApp.swift in Sources */,
-				8C063A4128EE88EF00254DC2 /* ModifyMainInformationView.swift in Sources */,
 				8C1E6FAB28BD89670062CAB8 /* AppColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
