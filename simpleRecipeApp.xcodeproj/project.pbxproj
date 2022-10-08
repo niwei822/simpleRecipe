@@ -20,6 +20,7 @@
 		8CB5AC1C28BC4B7800B4034A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5AC1B28BC4B7800B4034A /* Assets.xcassets */; };
 		8CB5AC1F28BC4B7800B4034A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5AC1E28BC4B7800B4034A /* Preview Assets.xcassets */; };
 		8CB5AC2728BC4BAF00B4034A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5AC2628BC4BAF00B4034A /* Recipe.swift */; };
+		8CDB0B3528F142C900F980FD /* ModifyDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB0B3428F142C800F980FD /* ModifyDirectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		8CB5AC1B28BC4B7800B4034A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CB5AC1E28BC4B7800B4034A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8CB5AC2628BC4BAF00B4034A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		8CDB0B3428F142C800F980FD /* ModifyDirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDirectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				8C063A4028EE88EF00254DC2 /* ModifyMainInformationView.swift */,
 				8C8881A928EFE0A800BDDC40 /* ModifyIngredientView.swift */,
 				8C8881AB28EFEBA100BDDC40 /* ModifyIngredientsView.swift */,
+				8CDB0B3428F142C800F980FD /* ModifyDirectionView.swift */,
 			);
 			path = ModifyRecipes;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				8C1E6FA928BD84A00062CAB8 /* RecipeDetailView.swift in Sources */,
 				8C1E6FAD28BDAB300062CAB8 /* RecipeCategoryGridView.swift in Sources */,
 				8C1E6FA728BD7F090062CAB8 /* RecipeData.swift in Sources */,
+				8CDB0B3528F142C900F980FD /* ModifyDirectionView.swift in Sources */,
 				8C31337128BED3A000DCA510 /* ModifyRecipeView.swift in Sources */,
 				8C8881AC28EFEBA100BDDC40 /* ModifyIngredientsView.swift in Sources */,
 				8C344FD728BDBF7600503F5C /* RecipesListView.swift in Sources */,
