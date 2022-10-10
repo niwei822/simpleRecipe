@@ -7,7 +7,7 @@
 
 import SwiftUI
 //create a recipecomponent protocol and have ingredient and direction conform to it.
-protocol RecipeComponent {
+protocol RecipeComponent: CustomStringConvertible {
     init()
 }
 
@@ -17,33 +17,39 @@ protocol ModifyComponentView: View {
     init(component: Binding<Component>, createAction: @escaping(Component) -> Void)
 }
 
-struct ModifyComponentsView: View {
-    @Binding var ingredients: [Ingredient]
-    @State private var newIngredient = Ingredient()
+struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyComponentView>: View where DestinationView.Component == Component  {
+    @Binding var components: [Component]
+    @State private var newComponent = Component()
     
     private let listBackgroundColor = AppColor.background
     private let listTextColor = AppColor.foreground
     
     var body: some View {
         VStack {
-            let addIngredientView = ModifyIngredientView(ingredient: $newIngredient) { ingredient in
-                ingredients.append(ingredient)
-                newIngredient = Ingredient()
-            }.navigationTitle("Add Ingredient")
-            if ingredients.isEmpty {
+            let addComponentView = DestinationView(component: $newComponent) { component in
+                components.append(component)
+                newComponent = Component()
+            }.navigationTitle("Add Component")
+            if components.isEmpty {
                 Spacer()
-                NavigationLink("Add the first ingredient",
-                               destination: addIngredientView)
+                NavigationLink("Add the first component",
+                               destination: addComponentView)
                 Spacer()
             } else {
+                HStack {
+                    Text("Component")
+                        .font(.title)
+                        .padding()
+                    Spacer()
+                }
                 List {
-                    ForEach(ingredients.indices, id: \.self) { index in
-                        let ingredient = ingredients[index]
-                        Text(ingredient.description)
+                    ForEach(components.indices, id: \.self) { index in
+                        let component = components[index]
+                        Text(component.description)
                     }
                     .listRowBackground(listBackgroundColor)
-                    NavigationLink("Add another ingredient",
-                                   destination: addIngredientView)
+                    NavigationLink("Add another component",
+                                   destination: addComponentView)
                     .buttonStyle(PlainButtonStyle())
                     .listRowBackground(listBackgroundColor)
                 }.foregroundColor(listTextColor)
@@ -54,7 +60,10 @@ struct ModifyComponentsView: View {
 
 struct ModifyComponentsView_Previews: PreviewProvider {
     @State static var emptyIngredients = [Ingredient]()
+    @State static var recipe = Recipe.testRecipes[1]
     static var previews: some View {
-        ModifyComponentsView(ingredients: $emptyIngredients)
-    }
+        NavigationView {
+             ModifyComponentsView<Ingredient, ModifyIngredientView>(components: $recipe.ingredients)
+           }
+         }
 }
