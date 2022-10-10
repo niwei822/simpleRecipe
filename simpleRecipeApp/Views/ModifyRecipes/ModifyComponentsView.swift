@@ -1,13 +1,17 @@
 //
-//  ModifyIngredientsView.swift
+//  ModifyComponentsView.swift
 //  simpleRecipeApp
 //
 //  Created by cecily li on 10/6/22.
 //
 
 import SwiftUI
+//create a recipecomponent protocol and have ingredient and direction conform to it.
+protocol RecipeComponent {
+    init()
+}
 
-struct ModifyIngredientsView: View {
+struct ModifyComponentsView: View {
     @Binding var ingredients: [Ingredient]
     @State private var newIngredient = Ingredient()
     
@@ -42,9 +46,9 @@ struct ModifyIngredientsView: View {
     }
 }
 
-struct ModifyIngredientsView_Previews: PreviewProvider {
+struct ModifyComponentsView_Previews: PreviewProvider {
     @State static var emptyIngredients = [Ingredient]()
     static var previews: some View {
-        ModifyIngredientsView(ingredients: $emptyIngredients)
+        ModifyComponentsView(ingredients: $emptyIngredients)
     }
 }
