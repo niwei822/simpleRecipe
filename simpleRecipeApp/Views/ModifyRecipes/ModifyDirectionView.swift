@@ -7,9 +7,14 @@
 
 import SwiftUI
 
-struct ModifyDirectionView: View {
+struct ModifyDirectionView: ModifyComponentView {
     @Binding var direction: Direction
     let createAction: (Direction) -> Void
+    
+    init(component: Binding<Direction>, createAction: @escaping (Direction) -> Void) {
+        self._direction = component
+        self.createAction = createAction
+    }
     
     private let listBackgroundColor = AppColor.background
     private let listTextColor = AppColor.foreground

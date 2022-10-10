@@ -7,10 +7,16 @@
 
 import SwiftUI
 
-struct ModifyIngredientView: View {
+struct ModifyIngredientView: ModifyComponentView {
+    
     @Binding var ingredient: Ingredient
     //createAction closure take an ingredient and return void
     let createAction:((Ingredient) -> Void)
+    init(component: Binding<Ingredient>, createAction: @escaping (Ingredient) -> Void) {
+        //_ is a type Binding<Ingredient>
+        self._ingredient = component
+        self.createAction = createAction
+    }
     
     private let listBackgroundColor = AppColor.background
     private let listTextColor = AppColor.foreground
