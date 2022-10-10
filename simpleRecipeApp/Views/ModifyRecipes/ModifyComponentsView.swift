@@ -9,6 +9,8 @@ import SwiftUI
 //create a recipecomponent protocol and have ingredient and direction conform to it.
 protocol RecipeComponent: CustomStringConvertible {
     init()
+    static func singularName() -> String
+    static func pluralName() -> String
 }
 
 protocol ModifyComponentView: View {
@@ -29,15 +31,15 @@ struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyC
             let addComponentView = DestinationView(component: $newComponent) { component in
                 components.append(component)
                 newComponent = Component()
-            }.navigationTitle("Add Component")
+            }.navigationTitle("Add \(Component.singularName().capitalized)")
             if components.isEmpty {
                 Spacer()
-                NavigationLink("Add the first component",
+                NavigationLink("Add the first \(Component.singularName())",
                                destination: addComponentView)
                 Spacer()
             } else {
                 HStack {
-                    Text("Component")
+                    Text(Component.pluralName().capitalized)
                         .font(.title)
                         .padding()
                     Spacer()
@@ -48,13 +50,22 @@ struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyC
                         Text(component.description)
                     }
                     .listRowBackground(listBackgroundColor)
-                    NavigationLink("Add another component",
+                    NavigationLink("Add another \(Component.singularName())",
                                    destination: addComponentView)
                     .buttonStyle(PlainButtonStyle())
                     .listRowBackground(listBackgroundColor)
                 }.foregroundColor(listTextColor)
             }
         }
+    }
+}
+
+extension RecipeComponent {
+    static func singularName() -> String {
+        String(describing: self).lowercased()
+    }
+    static func pluralName() -> String {
+        self.singularName() + "s"
     }
 }
 
