@@ -20,7 +20,7 @@ struct RecipeCategoryGridView: View {
                     category in
                     NavigationLink(
                         destination:
-                            RecipesListView(category: category)
+                            RecipesListView(viewStyle: .singleCategory(category))
                             .environmentObject(recipeData),
                         label: {CategoryView(category: category)
                 })

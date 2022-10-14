@@ -10,6 +10,10 @@ import Foundation
 class RecipeData: ObservableObject {
     //ObservableObject protocol monitors when the @Published property changes.
     @Published var recipes = Recipe.testRecipes
+    
+    var favoriteRecipes: [Recipe] {
+        recipes.filter { $0.isFavorite }
+    }
     func recipes(for category: MainInformation.Category) -> [Recipe] {
         var filteredRecipes = [Recipe]()
         for recipe in recipes {
