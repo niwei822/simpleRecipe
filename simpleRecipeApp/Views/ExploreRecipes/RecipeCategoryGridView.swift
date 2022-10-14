@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct RecipeCategoryGridView: View {
-  @StateObject  private var recipeData = RecipeData()
+    //since maintabview will be initial view, RecipeCategoryGridView should have recipedata passed in. instead of creating its own.
+    @EnvironmentObject  private var recipeData: RecipeData
     var body: some View {
         let columns = [GridItem(), GridItem()]
         NavigationView {
